@@ -1,0 +1,26 @@
+.my-nav{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0C6B7F;
+    padding: 0 40px;
+    color: #FDE175;
+
+}
+.my-nav h2{
+    font-size: 24px;
+}
+.my-nav h2 span{
+    font-size: 12px;
+}
+.nav-link a{
+ text-decoration: none;
+ color: #fff;
+ margin-left: 50px;
+
+}
+.login-link a{
+    text-decoration: none;
+    color: #fff; 
+}
