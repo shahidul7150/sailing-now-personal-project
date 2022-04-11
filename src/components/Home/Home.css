@@ -1,0 +1,37 @@
+.home-components{
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    height: 100vh;
+}
+.landing-pic img{
+    width: 698px;
+    height: 698px;
+}
+.content {
+    padding-left: 40px;
+    padding-top: 152px;
+}
+.content h2{
+    font-size: 40px;
+    font-family:poppins;
+    font-weight: bolder;
+}
+.content h2 span{
+    color: #0C6B7F;
+}
+.content h4{
+    font-size: 40px; 
+   font-weight: 400;
+}
+.content p{
+    font-size: 20px;
+    font-weight: 500;
+    color: #2b3031d0;
+}
+.content button{
+    background: #FADD75;
+    color: #293E60;
+    padding: 3px 10px;
+    border: 0;
+    font-size: 20px;
+}
