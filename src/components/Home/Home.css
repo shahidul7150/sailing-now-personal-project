@@ -1,7 +1,6 @@
 .home-components{
     display: grid;
     grid-template-columns: 8fr 4fr;
-    height: 100vh;
 }
 .landing-pic img{
     width: 698px;
