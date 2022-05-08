@@ -1,0 +1,20 @@
+.login-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   
+}
+
+.link-pass-reg{
+    padding-top: 15px;
+    line-height: 10px;
+}
+.register-transfer{
+    cursor: pointer;
+    color: #0C6B7F;
+}
+
+.register-transfer:hover{
+    color: #856f16;
+}
