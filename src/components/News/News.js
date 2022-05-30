@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Carousel from '../Carusel/Carousel';
 import SingleNews from './SingleNews';
 import Partner from './Partner';
+import Footer from '../Footer/Footer';
 
 const News = () => {
     const [newses, setNewses] = useState([]);
@@ -32,6 +33,7 @@ const News = () => {
 
                 <Partner/>
             </div>
+            <Footer/>
         </div>
     );
 };
