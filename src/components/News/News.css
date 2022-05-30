@@ -1,0 +1,5 @@
+.img-badge::before{
+    content: 'Hello';
+    background: rgb(204, 9, 9);
+    z-index: 99999;
+}

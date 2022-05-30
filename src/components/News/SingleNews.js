@@ -1,31 +1,21 @@
 import React from 'react';
-
-const SingleNews = () => {
+import './News.css';
+const SingleNews = ({ news }) => {
+  const { img, semiTitle, heading, article } = news;
   return (
-    <div class="indicator">
-      {/* <div class="indicator">
-  <span class="indicator-item indicator-center indicator-middle badge badge-secondary">Uploading Image...</span> 
-  <img src="https://api.lorem.space/image/house?w=300&h=150" />
-            </div> */}
+    <div className="bg-white shadow-md ">
+      <div className='relative'>
+              <img width="385px" className="img-badge" src={img} alt="" />
+              <div className='absolute top-0 right-0 bg-[#0C6B7F]
+              px-2 py-1 font-medium text-white'>
+                  <p>7 April 2022</p>
+              </div>
+      </div>
 
-      <div class="card w-96 bg-base-100 shadow-xl">
-        <figure>
-          <span class="indicator-item indicator-end indicator-top  bg-[#0c6c7f60] mt-3 mr-12 px-4 py-2 ">
-            7 April 2022
-          </span>
-          <img
-            width="100%"
-            src="https://api.lorem.space/image/shoes?w=400&h=225"
-            alt="Shoes"
-          />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
+      <div className="p-2">
+        <h2 className='text-xl'>{semiTitle}</h2>
+        <h2 className='text-3xl font-bold' >{heading}</h2>
+        <p>{article}</p>
       </div>
     </div>
   );
