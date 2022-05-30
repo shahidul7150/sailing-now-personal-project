@@ -7,7 +7,7 @@ const Login = () => {
   const onSubmit = (data) => console.log(data);
   return (
     <div className="sm:grid grid-cols-1 grid lg:grid-cols-2">
-      <div className="w-2/4 mx-auto mt-28 py-12">
+      <div className=" lg:w-2/4 mx-auto mt-28 py-12">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="form-control w-full pb-12">
           <h2 className='text-xl pt-1'>Please Login </h2>
