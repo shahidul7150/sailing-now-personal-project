@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import Carousel from '../Carusel/Carousel';
 import Footer from '../Footer/Footer';
-import Album from './Album';
+import Event from './Event';
 
-const PhotoAlbums = () => {
-  const [photos, setPhotos] = useState([]);
+const Events = () => {
+  const [events, setEvents] = useState([]);
   useEffect(() => {
     fetch('albums.json')
       .then((res) => res.json())
-      .then((data) => setPhotos(data));
+      .then((data) => setEvents(data));
   }, []);
   return (
       <div >
           <div>
               <Carousel/>
           </div>
-      <h2 className='text-center mt-12 font-bold text-xl'>PhotoAlbums</h2>
+          <p className='text-center py-5 mt-3 text-xl font-bold '>Our Events </p>
           <div className=' grid sm:grid-cols-1 lg:grid-cols-2 gap-3 my-5 mx-12'>
               
               <div className='relative'>
@@ -36,8 +36,8 @@ const PhotoAlbums = () => {
       </div>
 
           <div className='grid lg:grid-cols-4 gap-5 mx-12'>
-          {photos.map((photo) => (
-        <Album key={photo._id} photo={photo}></Album>
+          {events.map((photo) => (
+        <Event key={photo._id} photo={photo}></Event>
       ))}
           </div>
           
@@ -56,4 +56,4 @@ const PhotoAlbums = () => {
   );
 };
 
-export default PhotoAlbums;
+export default Events;

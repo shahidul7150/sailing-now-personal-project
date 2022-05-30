@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Album = ({ photo }) => {
+const Event = ({ photo }) => {
   return (
     <div class="card bg-base-100 shadow-xl">
      
@@ -14,4 +14,4 @@ const Album = ({ photo }) => {
   );
 };
 
-export default Album;
+export default Event;
