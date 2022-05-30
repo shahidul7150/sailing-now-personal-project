@@ -6,7 +6,7 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        mytheme: {
+        sailor: {
           primary: '#0C6B7F',
 
           secondary: '#FADD75',
@@ -15,7 +15,7 @@ module.exports = {
 
           neutral: '#0C6B7F',
 
-          'base-100': '#FFFFFF',
+          'base-100': '#F7F7F7',
 
           info: '#3ABFF8',
 
