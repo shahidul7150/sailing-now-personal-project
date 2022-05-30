@@ -4,6 +4,8 @@ const PhotoAlbums = () => {
     return (
         <div>
             <h2>This is PhotoAlbums</h2>
+
+            <div></div>
         </div>
     );
 };

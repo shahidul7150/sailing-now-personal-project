@@ -1,0 +1,26 @@
+[
+  {
+    "_id": 1,
+    "img": "https://i.ibb.co/rbS3fGV/burgerking.png"
+  },
+  {
+    "_id": 2,
+    "img": "https://i.ibb.co/YdXSgvs/donald.png"
+  },
+  {
+    "_id": 3,
+    "img": "https://i.ibb.co/kqzWHg4/jack.png"
+  },
+  {
+    "_id": 4,
+    "img": "https://i.ibb.co/Nr3nXzh/kfc.png"
+  },
+  {
+    "_id": 5,
+    "img": "https://i.ibb.co/9yXRyyP/pizzahut.png"
+  },
+  {
+    "_id": 6,
+    "img": "https://i.ibb.co/ZJVFHBF/starburg.png"
+  }
+]

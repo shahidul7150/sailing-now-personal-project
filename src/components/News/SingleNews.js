@@ -16,7 +16,8 @@ const SingleNews = ({ news }) => {
         <h2 className='text-xl'>{semiTitle}</h2>
         <h2 className='text-3xl font-bold' >{heading}</h2>
         <p>{article}</p>
-      </div>
+          </div>
+         
     </div>
   );
 };

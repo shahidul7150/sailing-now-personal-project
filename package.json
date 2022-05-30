@@ -12,6 +12,7 @@
     "react-hook-form": "^7.31.3",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
+    "swiper": "^8.1.6",
     "typeface-poppins": "^1.1.13",
     "web-vitals": "^2.1.4"
   },
