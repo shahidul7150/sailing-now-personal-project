@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Carousel from '../Carusel/Carousel';
 import Footer from '../Footer/Footer';
 import Album from './Album';
 
@@ -10,7 +11,10 @@ const PhotoAlbums = () => {
       .then((data) => setPhotos(data));
   }, []);
   return (
-    <div >
+      <div >
+          <div>
+              <Carousel/>
+          </div>
       <h2 className='text-center mt-12 font-bold text-xl'>PhotoAlbums</h2>
           <div className=' grid sm:grid-cols-1 lg:grid-cols-2 gap-3 my-5 mx-12'>
               

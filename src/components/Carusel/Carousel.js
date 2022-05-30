@@ -4,7 +4,7 @@ const Carousel = () => {
   return (
     <div class="carousel ">
       <div class="carousel-item">
-        <img src="https://i.ibb.co/zmK241j/New-Project.jpg" alt="Burger" />
+        <img height="100px" src="https://i.ibb.co/rHftCYP/IMG-0802-scaled.jpg" alt="Burger" />
       </div>
     </div>
   );
