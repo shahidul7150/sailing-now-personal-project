@@ -6,7 +6,7 @@ import Event from './Event';
 const Events = () => {
   const [events, setEvents] = useState([]);
   useEffect(() => {
-    fetch('albums.json')
+    fetch('events.json')
       .then((res) => res.json())
       .then((data) => setEvents(data));
   }, []);

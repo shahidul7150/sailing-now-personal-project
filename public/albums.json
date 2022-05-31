@@ -1,19 +1,27 @@
 [
     {
       "_id": 1,
-      "img": "https://i.ibb.co/rbS3fGV/burgerking.png"
+      "img": "https://cdn.ussailing.org/wp-content/uploads/2019/03/US-Sailing-Kilroy-SailingEnergy-594.jpg"
     },
     {
       "_id": 2,
-      "img": "https://i.ibb.co/YdXSgvs/donald.png"
+      "img": "https://www.sailingscuttlebutt.com/wp-content/uploads/2022/02/3_Iver-Alhmann-by-Uwe-Paesler-copyright.png"
     },
     {
       "_id": 3,
-      "img": "https://i.ibb.co/kqzWHg4/jack.png"
+      "img": "https://www.sail-world.com/photos/sailworld/photos/Alt_cap__1179.jpg"
     },
     {
       "_id": 4,
-      "img": "https://i.ibb.co/Nr3nXzh/kfc.png"
+      "img": "https://live.staticflickr.com/2121/2494894382_f54080e59d_b.jpg"
+    },
+    {
+      "_id": 5,
+      "img": "https://static01.nyt.com/images/2021/08/28/multimedia/28sp-maxi-challenges-inyt2/28sp-maxi-challenges-inyt2-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
+    },
+    {
+      "_id": 6,
+      "img": "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/21/2019/11/enterprise-restored-1977-americas-cup-boat-aerial-running-shot-credit-ian-roman.jpg"
     }
     
   ]
