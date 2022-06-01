@@ -10,7 +10,7 @@ const Login = () => {
       <div className=" lg:w-2/4 mx-auto mt-28 py-12">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="form-control w-full pb-12">
-          <h2 className='text-xl pt-1'>Please Login </h2>
+            <h2 className="text-xl pt-1">Please Login </h2>
             <label className="label">
               <span className="label-text">Email</span>
             </label>
@@ -48,7 +48,7 @@ const Login = () => {
               })}
             />
             <input
-                 className="btn border-0 text-[#293E60] bg-[#FADD75] w-full mt-3 "
+              className="btn border-0 text-[#293E60] bg-[#FADD75] w-full mt-3 "
               type="submit"
               value="Login"
             />
@@ -58,6 +58,16 @@ const Login = () => {
                 Create New Account
               </Link>
             </small>
+
+            <div className="w-28 mx-auto mt-5 text-center">
+              <button class="btn btn-secondary btn-circle btn-outline ">
+                <img
+                  width="40px"
+                  src="https://i.ibb.co/Qf57nvp/googl.png"
+                  alt=""
+                />
+              </button>
+            </div>
           </div>
         </form>
       </div>

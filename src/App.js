@@ -8,6 +8,7 @@ import Sailors from './components/Sailors/Sailors';
 import './App.css'
 import Login from './components/Login/Login';
 import Register from './components/Login/Register/Register';
+import Dashboard from './components/Dashboard/Dashboard';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='/photo' element={<Albums></Albums>}></Route>
         <Route path='/events' element={<Events></Events>}></Route>
         <Route path='/sailors' element={<Sailors></Sailors>}></Route>
+        <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
 
