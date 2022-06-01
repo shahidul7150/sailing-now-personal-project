@@ -1,7 +1,14 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
 
 const Header = () => {
+  const [user, loading, error] = useAuthState(auth);
+  const logOut = () => {
+    signOut(auth)
+  }
   return (
     <div class="navbar bg-[#0C6B7F] lg:px-12">
     <div class="navbar-start">
@@ -14,7 +21,7 @@ const Header = () => {
           <li><Link to='/events'>Events</Link></li>
           <li><Link to='/photo'>Photo Albums</Link></li>
           <li><Link to='/sailors'>Sailors</Link></li>
-          <li><Link to='login'>Login</Link></li>
+          <li>{user?<button onClick={logOut} >Sign Out</button> : <Link to='login'>Login</Link>}</li>
         </ul>
         </div>
         {/* <p className='text-xl text-[#F6EE24]'>SAILING <small className='text-xs ml-1 text-[#F6EE24]'>NOW</small></p> */}
@@ -32,7 +39,7 @@ const Header = () => {
           <li><Link className='hover:text-yellow-400' to='/photo'>Photo Albums</Link></li>
           <li><Link className='hover:text-yellow-400' to='/sailors'>Sailors</Link></li>
           <li><Link className='hover:text-yellow-400' to='/dashboard'>Dashboard</Link></li>
-          <li><Link className='hover:text-yellow-400' to='login'>Login</Link></li>
+          <li>{user?<button onClick={logOut} className='hover:text-yellow-400'>Sign Out</button> :<Link className='hover:text-yellow-400' to='login'>Login</Link>}</li>
       </ul>
     </div>
    
