@@ -2,9 +2,18 @@ import React from 'react';
 import landing from '../../images/landing.jpg';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import Loading from '../Shared/Loading';
 const Login = () => {
   const { register, handleSubmit } = useForm();
+
   const onSubmit = (data) => console.log(data);
+
+  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  if (loading) {
+    return <Loading></Loading>
+  }
   return (
     <div className="sm:grid grid-cols-1 grid lg:grid-cols-2">
       <div className=" lg:w-2/4 mx-auto mt-28 py-12">
@@ -59,8 +68,11 @@ const Login = () => {
               </Link>
             </small>
 
-            <div className="w-28 mx-auto mt-5 text-center">
-              <button class="btn btn-secondary btn-circle btn-outline ">
+           
+          </div>
+        </form>
+        <div className="w-28 mx-auto mt-2 text-center">
+              <button onClick={()=>signInWithGoogle()} class="btn btn-secondary btn-circle btn-outline ">
                 <img
                   width="40px"
                   src="https://i.ibb.co/Qf57nvp/googl.png"
@@ -68,8 +80,6 @@ const Login = () => {
                 />
               </button>
             </div>
-          </div>
-        </form>
       </div>
       <div className="text-end">
         <img src={landing} alt="" />

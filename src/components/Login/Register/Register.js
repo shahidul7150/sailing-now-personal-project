@@ -73,7 +73,10 @@ const Register = () => {
                 please login
               </Link>
             </small>
-            <div className="w-28 mx-auto mt-5 text-center">
+            
+          </div>
+        </form>
+        <div className="w-28 mx-auto mt-2 text-center">
               <button class="btn btn-secondary btn-circle btn-outline ">
                 <img
                   width="40px"
@@ -82,8 +85,6 @@ const Register = () => {
                 />
               </button>
             </div>
-          </div>
-        </form>
       </div>
       <div className="text-end">
         <img src={landing} alt="" />
