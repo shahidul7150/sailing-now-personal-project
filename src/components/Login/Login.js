@@ -1,35 +1,43 @@
 import React from 'react';
 import landing from '../../images/landing.jpg';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 
-
-
 const Login = () => {
-  const navigate =useNavigate()
-  const { register, formState: { errors }, handleSubmit } = useForm();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
-  let signInError
-  if (loading ||gLoading) {
-    return <Loading></Loading>
+  let signInError;
+  let from = location.state?.from?.pathname || '/';
+
+  if (loading || gLoading) {
+    return <Loading></Loading>;
   }
-  if (error ||gError ) {
+  if (error || gError) {
     signInError = (
       <small className="text-red-500">
-        {error?.message|| gError?.message }
+        {error?.message || gError?.message}
       </small>
     );
   }
   if (user || gUser) {
-    navigate('/')
+    navigate(from, { replace: true });
   }
   const onSubmit = (data) => {
-    console.log(data)
+    console.log(data);
     signInWithEmailAndPassword(data.email, data.password);
   };
   return (
@@ -57,17 +65,17 @@ const Login = () => {
               })}
             />
             <label className="label">
-                {errors.email?.type === 'required' && (
-                  <span className="label-text-alt text-red-500">
-                    {errors.email.message}
-                  </span>
-                )}
-                {errors.email?.type === 'pattern' && (
-                  <span className="label-text-alt text-red-500">
-                    {errors.email.message}
-                  </span>
-                )}
-              </label>
+              {errors.email?.type === 'required' && (
+                <span className="label-text-alt text-red-500">
+                  {errors.email.message}
+                </span>
+              )}
+              {errors.email?.type === 'pattern' && (
+                <span className="label-text-alt text-red-500">
+                  {errors.email.message}
+                </span>
+              )}
+            </label>
             <label className="label">
               <span className="label-text">Password</span>
             </label>
@@ -87,17 +95,17 @@ const Login = () => {
               })}
             />
 
-<label className="label">
-                {errors.password?.type === 'required' && (
-                  <span className="label-text-alt text-red-500">
-                    {errors.password.message}
-                  </span>
-                )}
-                {errors.password?.type === 'minLength' && (
-                  <span className="label-text-alt text-red-500">
-                    {errors.password.message}
-                  </span>
-                )}
+            <label className="label">
+              {errors.password?.type === 'required' && (
+                <span className="label-text-alt text-red-500">
+                  {errors.password.message}
+                </span>
+              )}
+              {errors.password?.type === 'minLength' && (
+                <span className="label-text-alt text-red-500">
+                  {errors.password.message}
+                </span>
+              )}
             </label>
             {signInError}
             <input
@@ -111,19 +119,16 @@ const Login = () => {
                 Create New Account
               </Link>
             </small>
-
-           
           </div>
         </form>
         <div className="w-28 mx-auto mt-2 text-center">
-              <button onClick={()=>signInWithGoogle()} class="btn btn-secondary btn-circle btn-outline ">
-                <img
-                  width="40px"
-                  src="https://i.ibb.co/Qf57nvp/googl.png"
-                  alt=""
-                />
-              </button>
-            </div>
+          <button
+            onClick={() => signInWithGoogle()}
+            class="btn btn-secondary btn-circle btn-outline "
+          >
+            <img width="40px" src="https://i.ibb.co/Qf57nvp/googl.png" alt="" />
+          </button>
+        </div>
       </div>
       <div className="text-end">
         <img src={landing} alt="" />
