@@ -20,7 +20,8 @@ const Header = () => {
           <li><Link to='/news'>News</Link></li>
           <li><Link to='/events'>Events</Link></li>
           <li><Link to='/photo'>Photo Albums</Link></li>
-          <li><Link to='/sailors'>Sailors</Link></li>
+            <li><Link to='/sailors'>Sailors</Link></li>
+            {user&&<li><Link className='hover:text-yellow-400' to='/dashboard'>Dashboard</Link></li>}
           <li>{user?<button onClick={logOut} >Sign Out</button> : <Link to='login'>Login</Link>}</li>
         </ul>
         </div>
@@ -38,7 +39,7 @@ const Header = () => {
           <li><Link className='hover:text-yellow-400' to='/events'>Events</Link></li>
           <li><Link className='hover:text-yellow-400' to='/photo'>Photo Albums</Link></li>
           <li><Link className='hover:text-yellow-400' to='/sailors'>Sailors</Link></li>
-          <li><Link className='hover:text-yellow-400' to='/dashboard'>Dashboard</Link></li>
+          {user&& <li><Link className='hover:text-yellow-400' to='/dashboard'>Dashboard</Link></li>}
           <li>{user?<button onClick={logOut} className='hover:text-yellow-400'>Sign Out</button> :<Link className='hover:text-yellow-400' to='login'>Login</Link>}</li>
       </ul>
     </div>
