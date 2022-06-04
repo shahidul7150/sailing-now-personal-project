@@ -7,6 +7,8 @@ const AddEvent = () => {
 
     const imgStorageKey = 'd46803d80a057c0ce0603c3a2117c9b1';
 
+
+
     const onSubmit = async data => {
         console.log(data)
 
@@ -20,7 +22,27 @@ const AddEvent = () => {
         })
             .then(res => res.json())
             .then(result => {
-            console.log('imgbb',result);
+                if (result.success) {
+                    const img = result.data.url;
+                    const event = {
+                        title: data.title,
+                        subTitle: data.subTitle,
+                        img:img
+                    }
+                    // send to database
+                    fetch('http://localhost:5000/event', {
+                        method: 'POST',
+                        headers: {
+                            'content-type':'application/json'
+                        },
+                        body:JSON.stringify(event)
+                    })
+                        .then(res => res.json())
+                        .then(eventData => {
+                        console.log('Event data',eventData);
+                    })
+                }
+           
         })
     };
     return (
