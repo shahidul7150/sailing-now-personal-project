@@ -47,25 +47,16 @@ const AddEvent = () => {
     };
     return (
         <div className='w-3/5 mx-auto'>
-       
-            {/* <form onSubmit={handleSubmit(onSubmit)}>
-      <input {...register("firstName", { required: true, maxLength: 20 })} />
-      <input {...register("lastName", { pattern: /^[A-Za-z]+$/i })} />
-      <input type="number" {...register("age", { min: 18, max: 99 })} />
-      <input type="submit" />
-    </form> */}
-            
-
-
+     
             <form onSubmit={handleSubmit(onSubmit)}>
           <div className="form-control w-full pb-12">
             <h2 className="text-xl pt-1">Create an Event</h2>
             <label className="label">
-              <span className="label-text">Email</span>
+              <span className="label-text">Event Heading</span>
             </label>
             <input
               type="text"
-              placeholder="Event Title"
+              placeholder="Event Heading"
               className="input input-bordered w-full "
               {...register('title', {
                 required: {
@@ -77,7 +68,7 @@ const AddEvent = () => {
                     
          
             <label className="label">
-              <span className="label-text">Password</span>
+              <span className="label-text">Sub-title</span>
             </label>
             <input
               type="text"
@@ -96,7 +87,7 @@ const AddEvent = () => {
             
                     <div className='border border-zinc-300 py-2 rounded-lg w-5/5 '>
                        
-                        <input className='file-upload' {...register("image")} type="file" />
+                        <input className='file-upload lg:ml-6' {...register("image")} type="file" />
                     </div>
 
             <input

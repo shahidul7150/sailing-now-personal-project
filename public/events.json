@@ -1,19 +1,27 @@
 [
     {
       "_id": 1,
-      "img": "https://images.news18.com/ibnlive/uploads/2021/04/1617795500_sports-2021-04-07t170448.450.png?impolicy=website&width=510&height=356"
+      "img": "https://images.news18.com/ibnlive/uploads/2021/04/1617795500_sports-2021-04-07t170448.450.png?impolicy=website&width=510&height=356",
+      "title":"Sailing Moment is great",
+      "subTitle":"Participate sailing ride enjoy your moment"
     },
     {
       "_id": 2,
-      "img": "https://imgnew.outlookindia.com/public/uploads/articles/2021/5/7/vishnu_sailing.jpg"
+      "img": "https://imgnew.outlookindia.com/public/uploads/articles/2021/5/7/vishnu_sailing.jpg",
+      "title":"Sailing Moment is great",
+      "subTitle":"Participate sailing ride enjoy your moment"
     },
     {
       "_id": 3,
-      "img": "https://pbs.twimg.com/media/EK-yeXYXUAEsjL1.jpg"
+      "img": "https://pbs.twimg.com/media/EK-yeXYXUAEsjL1.jpg",
+      "title":"Sailing Moment is great",
+      "subTitle":"Participate sailing ride enjoy your moment"
     },
     {
       "_id": 4,
-      "img": "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/21/2012/05/Stevie_Morrison_Ben_Rhodes_49er.jpg"
+      "img": "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/21/2012/05/Stevie_Morrison_Ben_Rhodes_49er.jpg",
+      "title":"Sailing Moment is great",
+      "subTitle":"Participate sailing ride enjoy your moment"
     }
     
   ]
