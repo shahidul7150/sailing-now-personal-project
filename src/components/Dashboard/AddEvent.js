@@ -93,7 +93,7 @@ const AddEvent = () => {
             <input
               className="btn border-0 text-[#293E60] bg-[#FADD75] w-full mt-3 "
               type="submit"
-              value="Login"
+              value="Create Event"
             />
            
           </div>
