@@ -4,7 +4,25 @@ import './Dashboard.css'
 
 const AddEvent = () => {
     const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+
+    const imgStorageKey = 'd46803d80a057c0ce0603c3a2117c9b1';
+
+    const onSubmit = async data => {
+        console.log(data)
+
+        const image = data.image[0];
+        const formData = new FormData()
+        formData.append('image',image);
+        const url = `https://api.imgbb.com/1/upload?key=${imgStorageKey}`;
+        fetch(url, {
+            method: 'POST',
+            body:formData
+        })
+            .then(res => res.json())
+            .then(result => {
+            console.log('imgbb',result);
+        })
+    };
     return (
         <div className='w-3/5 mx-auto'>
        
