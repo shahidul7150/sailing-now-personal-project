@@ -10,7 +10,7 @@ Password:any pass
 
 This website about sailing boat turnament
 ## This website features
-- Signle landing page 
+- Single landing page 
 - There have a news route publish moment news
 - There have a event route user can see all open event and can booking a seat
 - Photo route have turnament image gellary ,all sailor information into sailor route
